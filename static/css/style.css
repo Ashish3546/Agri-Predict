@@ -1,0 +1,772 @@
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-buttons .btn {
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+/* Features Section */
+.features-section {
+    background: #f8f9fa;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    background: white;
+}
+
+/* Plant Analysis Section */
+.plant-analysis-section {
+    background: #f8f9fa;
+}
+
+/* Basic Data Section */
+.basic-data-section {
+    background: white;
+}
+
+/* Research Section */
+.research-section {
+    background: #f8f9fa;
+}
+
+/* Enhanced Card Styles */
+.card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border-radius: 20px 20px 0 0 !important;
+    padding: 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Form Enhancements */
+.form-control, .form-select {
+    border: 2px solid #e9ecef;
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+/* Button Enhancements */
+.btn {
+    border-radius: 15px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Location Suggestions */
+.location-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 5px;
+}
+
+.suggestion-item {
+    padding: 15px 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f3f4;
+    transition: all 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+    transform: translateX(5px);
+}
+
+/* Prediction Results */
+.prediction-metric {
+    background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+    border-radius: 20px;
+    padding: 2rem;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.prediction-metric::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+.prediction-metric:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+}
+
+/* Plant Disease Detection */
+.upload-area {
+    border: 3px dashed #cbd5e0;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: linear-gradient(135deg, #f7fafc, #edf2f7);
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.upload-area:hover::before {
+    opacity: 1;
+}
+
+.upload-area.dragover {
+    border-color: #48bb78;
+    background: linear-gradient(135deg, #f0fff4, #e6fffa);
+    transform: scale(1.02);
+}
+
+.upload-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Analysis Cards */
+.analysis-card {
+    background: linear-gradient(135deg, #ffffff, #f8f9ff);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #48bb78;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.analysis-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.analysis-card.bg-info {
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    color: white;
+    border-left-color: #ffd700;
+}
+
+/* Disease Severity Badges */
+.disease-severity {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.severity-low {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.severity-medium {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+.severity-high {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+}
+
+/* Recommendation List */
+.recommendation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.recommendation-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    padding-left: 30px;
+    transition: all 0.2s ease;
+}
+
+.recommendation-list li:hover {
+    background: rgba(102, 126, 234, 0.05);
+    padding-left: 35px;
+}
+
+.recommendation-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #48bb78;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Soil and Irrigation Cards */
+.soil-type-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border-left: 4px solid #007bff;
+}
+
+.irrigation-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border-left: 4px solid #17a2b8;
+}
+
+/* Dataset Cards */
+.dataset-card {
+    height: 100%;
+}
+
+.dataset-header {
+    border-radius: 10px 10px 0 0;
+}
+
+.dataset-body {
+    border-radius: 0 0 10px 10px;
+}
+
+/* Badge Enhancements */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* Animation Classes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Weather Map Styles */
+.weather-map-section {
+    background: #f8f9fa;
+}
+
+.map-legend {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.map-info {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 5px solid #007bff;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card {
+    border-left-color: #ffc107;
+}
+
+.soil-card {
+    border-left-color: #28a745;
+}
+
+.recommendations-card {
+    border-left-color: #17a2b8;
+}
+
+.location-header {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #495057;
+}
+
+.info-value {
+    font-weight: 500;
+    color: #007bff;
+}
+
+.location-popup {
+    text-align: center;
+    min-width: 200px;
+}
+
+#weatherMap {
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+#weatherMap canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.weather-legend {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.weather-indicator {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.rain-animation {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #4A90E2, #2E5C8A);
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    animation: rainDrop 2s infinite;
+}
+
+.wind-animation {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #50C878, #228B22);
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    animation: windSpin 3s infinite linear;
+    position: relative;
+}
+
+.wind-animation::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+}
+
+.temp-gradient {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to top, #313695, #fee090, #a50026);
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    animation: tempPulse 2s infinite;
+}
+
+.cloud-animation {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, #E0E0E0, #B0B0B0);
+    border-radius: 50%;
+    margin: 0 auto 5px;
+    animation: cloudFloat 4s infinite ease-in-out;
+    position: relative;
+}
+
+.cloud-animation::before {
+    content: '☁';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #666;
+}
+
+/* Weather Animation Keyframes */
+@keyframes rainDrop {
+    0% { transform: translateY(-10px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(10px); opacity: 0; }
+}
+
+@keyframes windSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes tempPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes cloudFloat {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(5px); }
+}
+
+.weather-info {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.weather-detail-card {
+    background: linear-gradient(135deg, #f8f9ff, #e6f3ff);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.weather-detail-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.weather-icon {
+    margin-bottom: 1rem;
+}
+
+.weather-summary {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    border-left: 4px solid #17a2b8;
+}
+
+.weather-popup {
+    text-align: center;
+}
+
+.city-weather-popup {
+    text-align: center;
+}
+
+.weather-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Custom Map Markers */
+.wind-arrow {
+    background: transparent !important;
+    border: none !important;
+    animation: windRotate 2s infinite linear;
+}
+
+@keyframes windRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cloud-icon {
+    background: transparent !important;
+    border: none !important;
+    animation: cloudDrift 5s infinite ease-in-out;
+}
+
+@keyframes cloudDrift {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(10px); }
+}
+
+.city-marker {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid #007bff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2) !important;
+}
+
+.city-label {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #007bff;
+    white-space: nowrap;
+}
+
+.city-marker-dark {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 2px solid #00ff88 !important;
+    border-radius: 15px !important;
+    box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3) !important;
+}
+
+.city-label-dark {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #00ff88;
+    white-space: nowrap;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+/* Enhanced Button Styles */
+.btn-group .btn {
+    border-radius: 20px !important;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+.btn-group .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group .btn.btn-light {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-color: #007bff;
+    color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.2);
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-content {
+    margin: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .prediction-metric {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+    }
+    
+    #weatherMap {
+        height: 400px !important;
+    }
+    
+    .weather-controls {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .btn-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .btn-group .btn {
+        margin: 2px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+    
+    .weather-indicator {
+        margin-bottom: 10px;
+    }
+    
+    .city-label {
+        font-size: 10px;
+    }
+}
